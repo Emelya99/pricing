@@ -1,0 +1,39 @@
+// Header
+.header {
+    padding: 28px 0;
+
+    &__wrapper {
+        @include flex(flex,space-between,center,null)
+    }
+
+    &__burger {
+        cursor: pointer;
+        position: relative;
+        top: 2px;
+
+        svg {
+            fill: $main-color;
+
+            &:hover {
+                fill: $primary-color;
+            }
+        }
+    }
+
+    &__logo {
+        max-width: 138px;
+        max-height: 30px;
+    }
+
+    &__btn {
+        color: $invert-color;
+        background: $primary-color;
+        border-radius: 25px;
+        padding: 10px 30px;
+
+        &:hover {
+            color: $invert-color;
+            background: $main-color
+        }
+    }
+}

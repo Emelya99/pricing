@@ -1,0 +1,22 @@
+@media(max-width:$tablet){
+
+}
+
+@media(max-width:$mobile){
+    
+}
+
+@media(max-width:560px) {
+
+    // Header
+    .header {
+
+        &__burger {
+            top: 3px;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,49 @@
+$main-color: #231D4F;
+$primary-color: #BB6BD9;
+$secondary-color: #F2DAD5;
+$text-color: #848199;
+$invert-color: #FFF;
+$primary-font: 'Poppins', sans-serif;
+$transition: all .3s ease-out;
+$tablet: 1024px;
+$mobile: 767px;
+
+
+// Mixins
+@mixin for-tablet{
+    @media(max-width:$tablet){
+        @content;
+    }
+}
+
+@mixin for-mobile{
+    @media(max-width:$mobile){
+        @content;
+    }
+}
+
+@mixin media-query($tablet-size, $tablet-lh, $mobile-size){
+    @media(max-width:$tablet){
+        font-size: $tablet-size;
+        line-height: $tablet-lh;
+    }
+    @media(max-width:$mobile){
+        font-size: $mobile-size; 
+    }
+}
+
+@mixin flex($display, $justify-content, $align-items, $wrap){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+}
+
+@mixin images($mw, $mh) {
+    max-width: $mw;
+    max-height: $mh;
+    width: 100%;
+    height: 100%;
+}
+
+// Extends
