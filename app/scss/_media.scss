@@ -1,9 +1,124 @@
 @media(max-width:$tablet){
 
+    // Pricing
+    .pricing {
+
+        &__top {
+            padding: 0;
+            margin-bottom: 75px;
+        }
+
+        &__content {
+            margin: 0;
+            padding: 32px 32px 32px 16px;
+            justify-content: space-between;
+        }
+
+        &-box {
+            width: 32%;
+            padding: 0 10px;
+
+            &_popular {
+
+            }
+
+            &__text {
+                max-width: 200px;
+                font-size: 14px;
+            }
+
+            &__list {
+
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            &__btn {
+                padding: 12px 36px 12px 36px;
+            }
+        }
+    }
 }
 
 @media(max-width:$mobile){
-    
+
+    // Pricing
+    .pricing {
+        padding: 41px 0 64px;
+
+        &__top {
+            margin-bottom: 32px;
+        }
+
+        &__content {
+            padding: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &-box {
+            width: 50%;
+            padding: 16px;
+
+            &_popular {
+                width: 66%;
+                margin: 32px 0 0;
+                padding: 32px;
+                background: $main-color;
+                box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+                border-radius: 26px;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            &__badge {
+                top: 14px;
+            }
+
+            &__text {
+                font-size: 15px;
+            }
+
+            &__list {
+
+                li {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:650px) {
+
+    // Pricing
+    .pricing {
+
+        &__top {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__headers {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 36px;
+        }
+
+        &__buttons {
+            margin: 0;
+        }
+
+        &-box {
+
+            &__text {
+                max-width: 100%;
+            }
+        }
+    }
 }
 
 @media(max-width:560px) {
@@ -17,6 +132,50 @@
 
         &__btn {
             display: none;
+        }
+    }
+}
+
+@media(max-width:540px) {
+
+    // Pricing
+    .pricing {
+        
+        &__content {
+            padding: 32px 8px 8px;
+        }
+
+        &-box {
+            width: 100%;
+            padding: 0px 20px 48px;
+
+            &_popular {
+                width: 100%;
+                padding: 67px 20px 20px;
+                margin: 0;
+
+                .pricing-box {
+
+                    &__list {
+                        margin-bottom: 21px;
+                    }
+                }
+            }
+
+            &__badge {
+                top: 20px;
+                right: 50%;
+                transform: translate(50%, 0px);
+            }
+
+            &__list {
+                margin-bottom: 38px;
+            }
+
+            &__btn {
+                width: 100%;
+                padding: 12px 36px 11px 36px;
+            }
         }
     }
 }

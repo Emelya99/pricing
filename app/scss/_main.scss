@@ -37,3 +37,212 @@
         }
     }
 }
+
+// Pricing
+.pricing {
+    padding: 41px 0 69px;
+
+    &__top {
+        @include flex(flex,space-between,flex-end,null);
+        padding-right: 40px;
+        margin-bottom: 90px;
+    }
+
+    &__headers {
+        width: 66%;
+        padding-right: 30px;
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+
+    &__buttons {
+        display: flex;
+        margin-bottom: 5px;
+        background: $invert-color;
+        border-radius: 30px;
+
+        button {
+            font-size: 12px;
+            line-height: 18px;
+            letter-spacing: 0.833333px;
+            text-transform: uppercase;
+            padding: 13px;
+            text-align: center;
+            width: 110px;
+            border-radius: 22px;
+            color: #3B3472;
+            background: $invert-color;
+
+            &:hover {
+                color: $primary-color;
+            }
+
+            &.active {
+                color: $invert-color;
+                background: $primary-color;
+                box-shadow: 0px 6px 12px rgba(82, 67, 194, 0.16);
+                pointer-events: none;
+            }
+        }
+    }
+
+    &__content {
+        @include flex(flex,space-between,null,null);
+        margin-right: 29px;
+        background: rgba(255, 255, 255, 0.64);
+        border-radius: 26px;
+        padding: 40px 64px 40px 51px;
+    }
+
+    &-box {
+        padding: 0 17px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 31.63%;
+
+        &_popular {
+            position: relative;
+            z-index: 1;
+            color: $invert-color;
+            margin-left: 30px;
+
+            & .pricing-box {
+
+                &__price {
+                    color: $invert-color;
+                    span {
+                        color: $invert-color;
+                    }
+                }
+
+                &__title {
+                    color: $invert-color;
+                }
+
+                &__list {
+
+                    li:before {
+                        background-image: url('../img/pricing-check-2.svg');
+                    }
+                }
+
+                &__btn {
+                    width: 100%;
+                    background: $primary-color;
+
+                    &:hover {
+                        color: $main-color;
+                        background: $invert-color;
+                    }
+                }
+            } 
+
+            &::after {
+                content: '';
+                position: absolute;
+                z-index: -1;
+                top: -66px;
+                left: -13px;
+                width: 112%;
+                height: 122.2%;
+                background: $main-color;
+                box-shadow: 0px 42px 34px rgba(82, 67, 194, 0.295755);
+                border-radius: 26px;
+            }
+        }
+
+        &__badge {
+            position: absolute;
+            top: -46px;
+            right: 11px;
+            font-weight: 800;
+            font-size: 10px;
+            line-height: 15px;
+            letter-spacing: 0.833333px;
+            padding: 7px 17px 5px 16px;
+            color: $primary-color;
+            background: #403879;
+            border-radius: 13.5px;
+        }
+
+        &__price {
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 20px;
+            color: $main-color;
+
+            span {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 26px;
+                color: $text-color;
+                margin-left: 5px;
+            }
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 42px;
+            color: $main-color;
+            margin-bottom: 7px;
+        }
+
+        &__text {
+            margin-bottom: 16px;
+        }
+
+        &__list {
+            margin-bottom: 21px;
+
+            li {
+                padding-left: 30px;
+                position: relative;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url('../img/pricing-check-1.svg');
+                    background-size: auto;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 9px;
+                }
+            }
+        }
+
+        &__bottom {
+            margin-top: auto;
+        }
+
+        &__btn {
+            font-size: 15px;
+            line-height: 22px;
+            margin-top: auto;
+            border-radius: 24px;
+            color: $invert-color;
+            background: $main-color;
+            padding: 12px 56px 11px 55px;
+            text-align: center;
+
+            &:hover {
+                color: $invert-color;
+                background: $primary-color;
+            }
+        }
+    }
+}

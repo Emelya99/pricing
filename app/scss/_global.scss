@@ -1,6 +1,7 @@
-html,
-body {
-	height: 100%;
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
 }
 
 html{
@@ -10,12 +11,12 @@ html{
 
 body{
 	box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.08);
-	background: linear-gradient(180deg, #F5F5FA 0%, #F2DAD5 44.15%, #A1ABD6 100%);
+	background: linear-gradient(180deg, #F5F5FA 0%, #F2DAD5 44.15%, #A1ABD6 100%) no-repeat;
 	font-family: $primary-font;
 	font-weight: 500;
 	font-size: 15px;
 	line-height: 22px;
-	color: $text-color
+	color: $text-color;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -43,6 +44,7 @@ a{
 }
 
 button{
+	font-family: $primary-font;
 	cursor: pointer;
 }
 
@@ -66,13 +68,9 @@ img{
 }
 
 .container-xl {
-	max-width: 1366px;
+	max-width: 1314px;
 	margin: 0 auto;
-	padding: 0 50px;
-
-	@include for-tablet{
-		padding: 0 24px;
-	}
+	padding: 0 24px;
 }
 
 .container{
@@ -85,4 +83,8 @@ img{
 	font-size: 40px;
 	line-height: 60px;
 	color: $main-color;
+
+	@include for-mobile {
+		    font-size: 36px;
+	}
 }
