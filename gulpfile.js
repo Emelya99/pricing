@@ -16,8 +16,8 @@ function browsersync() {
   });
 }
 
-function deploy() {
-  return src('./dist/**/*').pipe(deploy());
+function deployPages() {
+  return src('dist/**/*').pipe(deploy());
 }
 
 function cleanDist() {
@@ -79,6 +79,7 @@ exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
+exports.deployPages = deployPages;
 
 exports.build = series(cleanDist, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
