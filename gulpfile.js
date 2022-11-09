@@ -6,6 +6,7 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
+const deploy = require('gulp-gh-pages');
 
 function browsersync() {
   browserSync.init({
@@ -13,6 +14,10 @@ function browsersync() {
       baseDir: 'app/',
     },
   });
+}
+
+function deploy() {
+  return src('./dist/**/*').pipe(deploy());
 }
 
 function cleanDist() {
